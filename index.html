@@ -109,11 +109,11 @@
   <h1 id="domain"></h1>
   <p>This domain is for sale.<br>Enquire privately for pricing.</p>
   <hr class="rule">
-  <a class="cta" id="wa" href="https://wa.me/971557568805" target="_blank" rel="noopener">
-    Enquire on WhatsApp
+  <a class="cta" id="wa" href="mailto:wasim.ullah@aol.co.uk?subject=Domain%20enquiry">
+    Enquire by email
     <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
   </a>
-  <a class="num" href="https://wa.me/971557568805" target="_blank" rel="noopener">+971 55 756 8805</a>
+  <a class="num" id="em" href="mailto:wasim.ullah@aol.co.uk?subject=Domain%20enquiry">wasim.ullah@aol.co.uk</a>
 </main>
 <footer>&copy; <span id="yr"></span></footer>
 <script>
@@ -127,9 +127,10 @@
       em.textContent = host.slice(i);
       h1.appendChild(em);
       document.title = host + " is for sale";
-      var msg = "Hi, I'm interested in acquiring " + host + ". Could you share the price?";
-      var url = "https://wa.me/971557568805?text=" + encodeURIComponent(msg);
+      var url = "mailto:wasim.ullah@aol.co.uk?subject=" + encodeURIComponent("Enquiry: " + host) +
+        "&body=" + encodeURIComponent("Hi, I'm interested in acquiring " + host + ". Could you share the price?");
       document.getElementById("wa").href = url;
+      document.getElementById("em").href = url;
     }
     document.getElementById("yr").textContent = new Date().getFullYear();
   })();
