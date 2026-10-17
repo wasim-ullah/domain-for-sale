@@ -4,162 +4,130 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Domain For Sale</title>
-<meta name="description" content="This domain is available for purchase. Contact for pricing.">
+<meta name="description" content="This domain is available for acquisition. Enquire for pricing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f4f4f2;
-    --fg: #0a0a0a;
-    --muted: #8a8a85;
-    --line: rgba(10,10,10,.08);
-    --btn-bg: #0a0a0a;
-    --btn-fg: #f4f4f2;
-    --dot: #22c55e;
+    --bg: #faf9f6;
+    --fg: #1a1a18;
+    --muted: #9a978f;
+    --line: #e6e3dc;
   }
   @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0a0a0a; --fg: #f4f4f2; --muted: #6e6e69;
-      --line: rgba(244,244,242,.07);
-      --btn-bg: #f4f4f2; --btn-fg: #0a0a0a;
-    }
+    :root { --bg: #121211; --fg: #ecebe6; --muted: #75736c; --line: #2a2926; }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; }
   body {
     background: var(--bg);
     color: var(--fg);
-    font-family: "Inter Tight", system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    background-image:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size: 64px 64px;
-    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
   }
-  .mono {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 12px;
-    letter-spacing: .04em;
+  main {
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    animation: rise 1s cubic-bezier(.2,.7,.2,1) both;
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .28em;
     text-transform: uppercase;
     color: var(--muted);
   }
-  header, footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px clamp(16px, 4vw, 40px);
-  }
-  .status { display: inline-flex; align-items: center; gap: 8px; }
-  .status i {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--dot);
-    box-shadow: 0 0 0 0 rgba(34,197,94,.5);
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%   { box-shadow: 0 0 0 0 rgba(34,197,94,.45); }
-    70%  { box-shadow: 0 0 0 8px rgba(34,197,94,0); }
-    100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 clamp(16px, 4vw, 40px);
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-  }
   h1 {
-    font-size: clamp(44px, 11vw, 148px);
-    font-weight: 600;
-    letter-spacing: -0.055em;
-    line-height: .92;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 18px 0 14px;
     word-break: break-word;
-    margin: 20px 0 32px;
   }
-  h1 .tld { color: var(--muted); }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    border-top: 1px solid var(--fg);
-    padding-top: 24px;
+  h1 em { font-style: italic; color: var(--muted); }
+  .rule {
+    width: 28px; height: 1px;
+    background: var(--line);
+    margin: 22px auto;
+    border: 0;
   }
-  .row p {
-    font-size: 17px;
-    line-height: 1.5;
-    max-width: 360px;
-  }
-  .row p span { color: var(--muted); }
-  .btn {
+  p { color: var(--muted); }
+  .cta {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    background: var(--btn-bg);
-    color: var(--btn-fg);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    padding: 16px 22px 16px 26px;
+    gap: 8px;
+    margin-top: 26px;
+    padding: 9px 18px;
+    border: 1px solid var(--line);
     border-radius: 999px;
-    transition: gap .2s ease, transform .2s ease;
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .02em;
+    transition: border-color .3s, background .3s;
   }
-  .btn:hover { gap: 18px; }
-  .btn:active { transform: scale(.98); }
-  .btn svg { width: 16px; height: 16px; }
-  a.mono { text-decoration: none; }
-  a.mono:hover { color: var(--fg); }
-  @media (max-width: 520px) {
-    .btn { width: 100%; justify-content: center; }
-    footer .hide-sm { display: none; }
+  .cta:hover { border-color: var(--fg); }
+  .cta svg { width: 12px; height: 12px; transition: transform .3s; }
+  .cta:hover svg { transform: translateX(2px); }
+  .num {
+    display: block;
+    margin-top: 14px;
+    font-size: 11px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: .04em;
+  }
+  .num:hover { color: var(--fg); }
+  footer {
+    position: fixed;
+    bottom: 22px; left: 0; right: 0;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--muted);
   }
 </style>
 </head>
 <body>
-  <header>
-    <span class="mono status"><i></i>Available</span>
-    <span class="mono">For Sale</span>
-  </header>
-
-  <main>
-    <span class="mono">Premium Domain</span>
-    <h1 id="domain">this<span class="tld">.domain</span></h1>
-    <div class="row">
-      <p>This domain is available for acquisition. <span>Contact for pricing — serious inquiries only.</span></p>
-      <a class="btn" id="wa" href="https://wa.me/971557568805" target="_blank" rel="noopener">
-        Message on WhatsApp
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </a>
-    </div>
-  </main>
-
-  <footer>
-    <a class="mono" href="https://wa.me/971557568805" target="_blank" rel="noopener">+971 55 756 8805</a>
-    <span class="mono hide-sm">&copy; <span id="yr"></span></span>
-  </footer>
-
+<main>
+  <div class="label">Available for acquisition</div>
+  <h1 id="domain">this<em>.domain</em></h1>
+  <p>This domain is for sale.<br>Enquire privately for pricing.</p>
+  <hr class="rule">
+  <a class="cta" id="wa" href="https://wa.me/971557568805" target="_blank" rel="noopener">
+    Enquire on WhatsApp
+    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+  </a>
+  <a class="num" href="https://wa.me/971557568805" target="_blank" rel="noopener">+971 55 756 8805</a>
+</main>
+<footer>&copy; <span id="yr"></span></footer>
 <script>
   (function () {
     var host = (location.hostname || "").replace(/^www\./, "");
     if (host && host.indexOf(".") > -1) {
       var i = host.indexOf(".");
-      var name = host.slice(0, i), tld = host.slice(i);
       var h1 = document.getElementById("domain");
-      h1.textContent = name;
-      var s = document.createElement("span");
-      s.className = "tld"; s.textContent = tld;
-      h1.appendChild(s);
+      h1.textContent = host.slice(0, i);
+      var em = document.createElement("em");
+      em.textContent = host.slice(i);
+      h1.appendChild(em);
       document.title = host + " is for sale";
-      var msg = "Hi, I'm interested in buying " + host + ". What's the price?";
-      document.getElementById("wa").href = "https://wa.me/971557568805?text=" + encodeURIComponent(msg);
+      var msg = "Hi, I'm interested in acquiring " + host + ". Could you share the price?";
+      var url = "https://wa.me/971557568805?text=" + encodeURIComponent(msg);
+      document.getElementById("wa").href = url;
     }
     document.getElementById("yr").textContent = new Date().getFullYear();
   })();
