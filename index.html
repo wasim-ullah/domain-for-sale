@@ -56,6 +56,7 @@
     margin: 18px 0 14px;
     word-break: break-word;
   }
+  h1:empty { display: none; }
   h1 em { font-style: italic; font-weight: 400; color: var(--muted); }
   .rule {
     width: 28px; height: 1px;
@@ -105,7 +106,7 @@
 <body>
 <main>
   <div class="label">For sale</div>
-  <h1 id="domain">This <em>domain</em></h1>
+  <h1 id="domain"></h1>
   <p>This domain is for sale.<br>Enquire privately for pricing.</p>
   <hr class="rule">
   <a class="cta" id="wa" href="https://wa.me/971557568805" target="_blank" rel="noopener">
